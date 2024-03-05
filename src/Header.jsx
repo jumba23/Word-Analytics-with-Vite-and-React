@@ -1,11 +1,12 @@
 import BackgroundImage from "./BackgroundImage";
+import H1 from "./H1";
 
 const Header = () => {
   return (
     <header>
       <BackgroundImage />
 
-      <h1>Word Analytics</h1>
+      <H1 />
     </header>
   );
 };
