@@ -3,11 +3,12 @@ import Warning from "./Warning";
 
 const TextArea = () => {
   const [text, setText] = useState("");
+  const [showWarning, setShowWarning] = useState(false);
 
   const handleChange = (e) => {
     let newText = e.target.value;
     if (newText.includes("<script>")) {
-      alert("No script tag allowed");
+      setShowWarning(true);
       newText = newText.replace("<script>", "");
     }
     setText(newText);
@@ -21,7 +22,7 @@ const TextArea = () => {
         placeholder="Enter your text"
         spellCheck="false"
       />
-      <Warning />
+      {showWarning ? <Warning /> : null}
     </div>
   );
 };
