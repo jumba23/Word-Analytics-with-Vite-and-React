@@ -1,5 +1,5 @@
 const TextArea = () => {
-  return <textarea />;
+  return <textarea className="textarea" />;
 };
 
 export default TextArea;

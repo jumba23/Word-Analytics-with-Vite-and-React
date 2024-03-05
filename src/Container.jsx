@@ -3,7 +3,7 @@ import TextArea from "./TextArea";
 
 const Container = () => {
   return (
-    <main>
+    <main className="container">
       <TextArea />
       <Stats />
     </main>
