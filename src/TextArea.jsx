@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Warning from "./Warning";
 
 const TextArea = () => {
   const [text, setText] = useState("");
@@ -13,13 +14,15 @@ const TextArea = () => {
   };
 
   return (
-    <textarea
-      className="textarea"
-      value={text}
-      onChange={handleChange}
-      placeholder="Enter your text"
-      spellCheck="false"
-    />
+    <div className="textarea">
+      <textarea
+        value={text}
+        onChange={handleChange}
+        placeholder="Enter your text"
+        spellCheck="false"
+      />
+      <Warning />
+    </div>
   );
 };
 
