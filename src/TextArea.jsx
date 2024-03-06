@@ -7,12 +7,16 @@ const TextArea = () => {
 
   const handleChange = (e) => {
     let newText = e.target.value;
+
+    //basic validation
     if (newText.includes("<script>")) {
       setWarningText("No Script Tag Allowed");
-      newText = newText.replace("<scrip>", "");
+      newText = newText.replace("<script>", "");
     } else if (newText.includes("@")) {
       setWarningText("No @ Symbol Allowed");
       newText = newText.replace("@", "");
+    } else {
+      setWarningText("");
     }
     setText(newText);
   };
