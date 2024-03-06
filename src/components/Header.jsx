@@ -5,7 +5,6 @@ const Header = () => {
   return (
     <header>
       <BackgroundImage />
-
       <H1 />
     </header>
   );

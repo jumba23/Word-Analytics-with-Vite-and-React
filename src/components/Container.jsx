@@ -1,7 +1,10 @@
 import { useState } from "react";
 import Stats from "./Stats";
 import TextArea from "./TextArea";
-import { FACEBOOK_MAX_CHARACTERS, INSTAGRAM_MAX_CHARACTERS } from "./Constants";
+import {
+  FACEBOOK_MAX_CHARACTERS,
+  INSTAGRAM_MAX_CHARACTERS,
+} from "../lib/constants";
 
 const Container = () => {
   const [text, setText] = useState("");
